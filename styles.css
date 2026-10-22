@@ -1,14 +1,35 @@
+@font-face {
+  font-family: Hack;
+  src: url("fonts/hack-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Hack;
+  src: url("fonts/hack-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
-  background: #fff;
-  color: #111;
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: Hack, Consolas, "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+::selection {
+  background: #264f78;
+  color: #fff;
 }
 
 .page {
-  max-width: 42rem;
+  max-width: 46rem;
   margin: 0 auto;
   padding: 2.5rem 1.25rem 4rem;
 }
@@ -21,15 +42,17 @@ p {
 }
 
 h1 {
-  margin-bottom: 0.15rem;
-  font-size: 1.75rem;
+  margin-bottom: 0.2rem;
+  color: #dcdcaa;
+  font-size: 1.35rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .role {
-  margin-bottom: 0.35rem;
-  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  color: #ce9178;
+  font-size: 1rem;
 }
 
 .contact {
@@ -37,17 +60,18 @@ h1 {
 }
 
 a {
-  color: #0b3d91;
+  color: #9cdcfe;
 }
 
 a:hover {
-  text-decoration: none;
+  color: #4fc1ff;
 }
 
 h2 {
   margin: 2rem 0 0.75rem;
-  padding-bottom: 0.2rem;
-  border-bottom: 1px solid #111;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #3c3c3c;
+  color: #569cd6;
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -65,11 +89,13 @@ h2 {
 }
 
 .skills dt {
+  color: #4ec9b0;
   font-weight: 700;
 }
 
 .skills dt::after {
   content: ": ";
+  color: #d4d4d4;
 }
 
 .job {
@@ -78,11 +104,34 @@ h2 {
 
 .job h3 {
   margin-bottom: 0;
-  font-size: 1.05rem;
+  color: #dcdcaa;
+  font-size: 1rem;
+}
+
+.job a,
+.job strong {
+  font-weight: 700;
+}
+
+.job strong {
+  color: #9cdcfe;
+}
+
+.job li {
+  margin-top: 0.7rem;
+}
+
+.job li span {
+  display: block;
 }
 
 .meta {
   margin-bottom: 0.35rem;
+  color: #6a9955;
+}
+
+.job > p:not(.meta) {
+  margin-bottom: 0.15rem;
 }
 
 ul {
@@ -92,6 +141,10 @@ ul {
 
 li + li {
   margin-top: 0.25rem;
+}
+
+li::marker {
+  color: #c586c0;
 }
 
 .projects {
@@ -109,6 +162,7 @@ li + li {
 
 .projects span {
   display: block;
+  color: #d4d4d4;
 }
 
 @media (max-width: 640px) {
@@ -117,7 +171,7 @@ li + li {
   }
 
   h1 {
-    font-size: 1.45rem;
+    font-size: 1.15rem;
   }
 
   .contact {
